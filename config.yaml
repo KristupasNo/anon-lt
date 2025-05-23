@@ -1,0 +1,77 @@
+adapter: lora
+base_model: neurotechnology/Lt-Llama-2-13b-instruct-hf
+
+bf16: auto
+
+dataset_processes: 32
+
+datasets:
+  - path: .
+    type: alpaca
+    data_files: ["train.json"]
+    message_property_mappings:
+      role: role
+      content: content
+
+validation_datasets:
+  - path: .
+    type: alpaca
+    data_files: ["validation.json"]
+    message_property_mappings:
+      role: role
+      content: content
+
+val_set_size: 0.0
+shuffle_merged_datasets: false
+
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - v_proj
+  - k_proj
+  - o_proj
+  - gate_proj
+  - down_proj
+  - up_proj
+
+optimizer: adamw_bnb_8bit
+learning_rate: 2e-4
+lr_scheduler: cosine
+weight_decay: 0.0
+
+micro_batch_size: 16
+gradient_accumulation_steps: 1
+gradient_checkpointing: true
+
+num_epochs: 3
+max_prompt_len: 512
+sequence_len: 4096
+train_on_inputs: false
+
+load_in_8bit: true
+load_in_4bit: false
+qlora_sharded_model_loading: false
+
+use_ray: false
+ray_num_workers: 1
+resources_per_worker:
+  GPU: 1
+
+output_dir: ./outputs/anon-lt-lora
+save_safetensors: true
+save_only_model: false
+load_best_model_at_end: true
+pretrain_multipack_attn: true
+pretrain_multipack_buffer_size: 10000
+
+trl:
+  log_completions: false
+  ref_model_sync_steps: 64
+  ref_model_mixup_alpha: 0.9
+  sync_ref_model: false
+  use_vllm: false
+  vllm_device: auto
+  vllm_dtype: auto
+  vllm_gpu_memory_utilization: 0.9
