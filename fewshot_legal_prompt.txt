@@ -1,0 +1,61 @@
+Remdamiesi žemiau pateiktais anonimizavimo pavyzdžiais, anonimizuokite asmens duomenis pateiktame tekste.
+
+Naudokite tik šiuos žymeklius (kiekvienas aprašytas žemiau):
+
+**Asmeninė informacija**  
+[ID] – asmens kodas, sutarties numeris  
+[El. paštas] – elektroninio pašto adresas  
+[Tel. numeris] – telefono numeris  
+[Vardas] – asmens vardas  
+[Pavardė] – asmens pavardė  
+[Vardas_Pavardė] – pilnas vardas ir pavardė  
+[Lytis] – lyties nuorodos (pvz., vyras, moteris)  
+[Vaikų_skaičius] – vaikų skaičius (pvz., „trys vaikai“)  
+[Šeimyninė_informacija] – šeimos nariai (pvz., sutuoktinis, brolis)
+
+**Profesija ir socialinė padėtis**  
+[Profesija] – bendrinės profesijos (pvz., gydytojas, inžinierius)  
+[Pareigos] – pareigybės (pvz., vyr. specialistė, praktikantas)  
+[Vadovas] – vadovaujančios pareigos (pvz., direktorius, prezidentas)  
+[Apibūdinimas] – socialinis / finansinis statusas (pvz., „turtingiausias žmogus“)  
+[Veikla] – hobiai, pomėgiai, veiklos (pvz., žygiai, bėgimas)  
+[Projektas] – projektai (pvz., ES fondų projektai, infrastruktūros iniciatyvos)
+[Dokumentas] -  “statybos leidimas,” “darbo sutartis,” “licencija”
+
+**Vietovės ir organizacijos**  
+[Miestas] – miestų pavadinimai (pvz., Vilnius, Kaunas)  
+[Gatvė] – gatvių adresai (pvz., Gedimino pr. 12)  
+[Šalis] – šalių pavadinimai (pvz., Lietuva, Vokietija)  
+[Vietovė] – bendros lokacijos (pvz., „prie Baltijos jūros“, „Labanoro girioje“)  
+[Įstaiga] – institucijos (pvz., Apygardos teismas, savivaldybė)  
+[Pavadinimas] – organizacijų ar prekių ženklų pavadinimai (pvz., MB „Žalias Tilas“)
+
+**Laiko žymenys**  
+[Metai] – konkretūs metai (pvz., 2022 m., 1990 m.)  
+[Gimimo_data] – gimimo datos (pvz., „gimęs 1975-05-13“)  
+[Data] – konkrečios datos (pvz., 2024-04-24)  
+[Mėnuo] – mėnesių nuorodos (pvz., „liepos mėn.“)  
+[Diena] – savaitės dienos ar konkretūs terminai (pvz., „pirmadienį“)  
+[Laikotarpis] – santykinis laikas (pvz., „prieš trejus metus“)
+
+**Medicininė informacija**  
+[Augintinis] – gyvūnai (pvz., „labradoro šuo“, „katė“)  
+[Diagnozė] – ligų pavadinimai (pvz., diabetas, astma)  
+[Simptomas] – simptomai (pvz., kosulys, galvos skausmas)  
+[Vaistas] – medikamentai (pvz., paracetamolis, ibuprofenas)  
+[Procedūra] – gydymo ar diagnostikos procedūros (pvz., rentgeno tyrimas, fizioterapija)
+
+---
+
+PAVYZDYS 1:
+Įvestis: "Advokatė Lina iš Šilalės konsultuoja vietos gyventojus paveldėjimo klausimais. Ji neseniai padėjo parengti skundo projektą, susijusį su testamento galiojimu."
+Išvestis: "[Profesija] [Vardas] iš [Miestas] konsultuoja [Šeimyninė_informacija] [Dokumentas]. Ji neseniai padėjo parengti [Dokumentas], susijusį su [Dokumentas] galiojimu."
+
+PAVYZDYS 2:
+Įvestis: "Savivaldybės teisininkas Andrius Juknevičius prieš mėnesį pateikė skundą administraciniam teismui. Jis atstovavo vienai iš statybų bendrovių ir ginčijo sklypo paskirties pakeitimą. Pateikti dokumentai buvo analizuojami tris savaites."
+Išvestis: "[Profesija] [Vardas_Pavardė] prieš [Laikotarpis] pateikė skundą [Įstaiga]. Jis atstovavo vienai iš [Įstaiga] ir ginčijo [Dokumentas]. Pateikti [Dokumentas] buvo analizuojami tris [Laikotarpis]."
+
+Dabar anonimizuokite šį tekstą:
+{SNIPPET}
+
+Pateikite tik anonimizuotą tekstą.
