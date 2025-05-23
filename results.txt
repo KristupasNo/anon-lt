@@ -1,0 +1,78 @@
+root@b6d100954ee0:/workspace# python3 evaluate_models.py
+Loaded 33 gold examples.
+
+=== chatgpt (overall) ===
+{
+  "micro": {
+    "precision": 0.7249712313003452,
+    "recall": 0.7894736842105263,
+    "f1": 0.7558488302339531
+  },
+  "macro_f1": 0.7325349061627869,
+  "direct_macro_f1": 0.6155144344799518,
+  "indirect_micro_f1": 0.8011100832562443,
+  "composite": 0.7454313886233566
+} 
+
+chatgpt — Zero-Shot: micro-F1 = 0.766
+chatgpt — Few-Shot: micro-F1 = 0.604
+chatgpt — Chain-of-Thought: micro-F1 = 0.914
+
+=== deepseek (overall) ===
+{
+  "micro": {
+    "precision": 0.5368150684931506,
+    "recall": 0.7827715355805244,
+    "f1": 0.6368715083798883
+  },
+  "macro_f1": 0.6118640989053641,
+  "direct_macro_f1": 0.4973565233042787,
+  "indirect_micro_f1": 0.6733902249806051,
+  "composite": 0.6205801144777071
+} 
+
+deepseek — Zero-Shot: micro-F1 = 0.654
+deepseek — Few-Shot: micro-F1 = 0.524
+deepseek — Chain-of-Thought: micro-F1 = 0.739
+
+=== gemini (overall) ===
+{
+  "micro": {
+    "precision": 0.6540755467196819,
+    "recall": 0.8567708333333334,
+    "f1": 0.7418263810597521
+  },
+  "macro_f1": 0.6422595796368317,
+  "direct_macro_f1": 0.40422194954806906,
+  "indirect_micro_f1": 0.777092511013216,
+  "composite": 0.6652313425736718
+} 
+
+gemini — Zero-Shot: micro-F1 = 0.671
+gemini — Few-Shot: micro-F1 = 0.693
+gemini — Chain-of-Thought: micro-F1 = 0.894
+
+=== lt_llama (overall) ===
+{
+  "micro": {
+    "precision": 0.8482871125611745,
+    "recall": 0.5997693194925029,
+    "f1": 0.7027027027027027
+  },
+  "macro_f1": 0.6660779664837096,
+  "direct_macro_f1": 0.4979737348680957,
+  "indirect_micro_f1": 0.7573221757322176,
+  "composite": 0.679517643472981
+} 
+
+lt_llama — Zero-Shot: micro-F1 = 0.513
+lt_llama — Few-Shot: micro-F1 = 0.704
+lt_llama — Chain-of-Thought: micro-F1 = 0.918
+
+=== Average micro-F1 by Prompt Type (across all models) ===
+{
+  "Zero-Shot": 0.6509016105079222,
+  "Few-Shot": 0.631076718717726,
+  "Chain-of-Thought": 0.866289011796153
+}
+root@b6d100954ee0:/workspace# 
